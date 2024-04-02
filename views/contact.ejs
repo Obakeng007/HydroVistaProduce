@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <%- include('./partials/head.ejs') %>
+
+  <body class="bg-gray">
+    <!-- Header -->
+    <%- include('./partials/header.ejs') %>
+    <!-- Contact Section -->
+    <section class="py-16 px-4">
+      <div class="container mx-auto justify-center flex flex-col md:flex-row">
+        <!-- Contact Form -->
+        <div class="md:w-1/2 rounded-lg overflow-hidden mb-8 md:mb-0">
+          <h2 class="text-3xl font-semibold mb-4">Contact Form</h2>
+          <form class="w-full max-w-lg">
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label
+                  for="name"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                  >Name</label
+                >
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="John Doe"
+                  class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+              <div class="w-full md:w-1/2 px-3">
+                <label
+                  for="email"
+                  class="block text-gray-700 text-sm font-bold mb-2"
+                  >Email</label
+                >
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="example@example.com"
+                  class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+            </div>
+            <div class="mb-6">
+              <label
+                for="subject"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Subject</label
+              >
+              <input
+                id="subject"
+                type="text"
+                placeholder="Subject"
+                class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                placeholder="Your message here"
+                rows="6"
+                class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              ></textarea>
+            </div>
+            <div class="flex items-center justify-end">
+              <button
+                type="submit"
+                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="md:w-1/2 pr-8 mb-8 md:mb-0">
+          <h2 class="text-3xl font-semibold mb-4">Contact Details</h2>
+          <p class="text-lg mb-4">
+            <strong>Address:</strong> 123 Farm Road, City, Country
+          </p>
+          <p class="text-lg mb-4"><strong>Email:</strong> info@farmfresh.com</p>
+          <p class="text-lg mb-4"><strong>Phone:</strong> +123 456 789</p>
+          <p class="text-lg">
+            Feel free to reach out to us with any questions or inquiries. We're
+            here to help!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <% include('./partials/footer.ejs') %>
+  </body>
+</html>

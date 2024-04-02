@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+
+  <body class="bg-gray-200 flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+      <form id="registrationForm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <input
+              id="username"
+              type="text"
+              placeholder="Enter your name"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div>
+            <input
+              id="lastname"
+              type="text"
+              placeholder="Enter your lastname"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+        </div>
+        <div class="mt-4">
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+        <div class="mt-4">
+          <input
+            id="address"
+            type="text"
+            placeholder="Enter your postal address"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <input
+              id="phone"
+              type="number"
+              placeholder="Enter your phone"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div class="flex items-center">
+            <input
+              type="radio"
+              id="Male"
+              name="radioGroup"
+              class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
+            />
+            <label for="Male" class="ml-2 text-gray-700">Male</label>
+            <input
+              type="radio"
+              id="Female"
+              name="radioGroup"
+              class="ml-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
+            />
+            <label for="Female" class="ml-2 text-gray-700">Female</label>
+          </div>
+        </div>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div>
+            <input
+              id="confirmpass"
+              type="password"
+              placeholder="Confirm password"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold w-full py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Register Account
+          </button>
+        </div>
+      </form>
+      <hr class="mt-4" />
+      <p class="mt-4 text-center text-gray-500 text-xs">
+        Already have an account?
+        <a href="login.html" class="text-blue-500">Log Into Account</a>
+      </p>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
