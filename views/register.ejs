@@ -4,12 +4,13 @@
 
   <body class="bg-gray-200 flex justify-center items-center h-screen">
     <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-      <form id="registrationForm">
+      <form id="registrationForm" action="/users" method="post">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <input
               id="username"
               type="text"
+              name="firstName"
               placeholder="Enter your name"
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -18,6 +19,7 @@
             <input
               id="lastname"
               type="text"
+              name="lastName"
               placeholder="Enter your lastname"
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -27,6 +29,7 @@
           <input
             id="email"
             type="email"
+            name="email"
             placeholder="Enter your email"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
@@ -35,6 +38,7 @@
           <input
             id="address"
             type="text"
+            name="postalAddress"
             placeholder="Enter your postal address"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
@@ -44,32 +48,27 @@
             <input
               id="phone"
               type="number"
+              name="phone"
               placeholder="Enter your phone"
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
-          <div class="flex items-center">
-            <input
-              type="radio"
-              id="Male"
-              name="radioGroup"
-              class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
-            />
-            <label for="Male" class="ml-2 text-gray-700">Male</label>
-            <input
-              type="radio"
-              id="Female"
-              name="radioGroup"
-              class="ml-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
-            />
-            <label for="Female" class="ml-2 text-gray-700">Female</label>
-          </div>
+            <div>
+                <input
+                        id="gender"
+                        type="text"
+                        name="gender"
+                        placeholder="Enter gender"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+            </div>
         </div>
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <input
               id="password"
               type="password"
+              name="password"
               placeholder="Enter your password"
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />

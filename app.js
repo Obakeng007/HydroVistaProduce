@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const mongoose = require('mongoose');
 const User = require('./models/user.js');
 
+
 //Create express app
 const app = express();
 const dbUri = 'mongodb+srv://Dusani:KmyapCcJrGWQlbh1@hydrovista.3i6p94h.mongodb.net/hydrovista?retryWrites=true&w=majority&appName=HydroVista';
@@ -50,6 +51,7 @@ app.get('/all-users',(req, res)=>{
 //Middleware for images and logging
 app.use(express.static('public'));
 app.use(express.static('css'));
+app.use(express.urlencoded({extended:true}))
 app.use(morgan("dev"));
 
 //Create routes
@@ -77,6 +79,17 @@ app.get("/login", (req, res) => {
 app.get("/product", (req, res) => {
   res.status(200).render("product");
 });
+
+//Request to get users from form
+app.post('/users',(req, res)=>{
+  const users = new User(req.body);
+  users.save()
+    .then((data)=>{
+      res.redirect('/')
+    }).catch((err)=>{
+      console.log(err)
+  })
+})
 
 app.use((req, res) => {
   res.status(404).render("404");
