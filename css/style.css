@@ -244,6 +244,23 @@ textarea {
     page-break-after: avoid;
   }
 }
-
+/* Additional custom styles */
+.bg-custom-green {
+  background-color: #00563b;
+}
+.bg-custom-yellow {
+  background-color: #f0ead6;
+}
+.bg-custom-blue {
+  background-color: #63b3ed;
+}
+.bg-custom-orange {
+  background-color: #f6ad55;
+}
+.active-link {
+  /* Add your active link styles here */
+  font-weight: bold;
+  color: #010127; /* Change to your desired color */
+}
 
 
