@@ -7,6 +7,11 @@ const app = express();
 app.listen(3000);
 
 //Create routes
-app.get("/", (res, req) => {
+app.get("/", (req, res) => {
   res.sendFile("index.html", { root: __dirname });
+  res.status(200);
+});
+
+app.get("/product", (req, res) => {
+  res.sendFile("product.html", { root: __dirname });
 });
