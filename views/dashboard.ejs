@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+<!-- Navigation -->
+<nav class="bg-gray-800 shadow-lg text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-semibold">Admin Dashboard<br>Welcome <%= user%></h1>
+        <form action="/admin/logout">
+            <button class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg">Logout</button>
+        </form>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mx-auto mt-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Manage Users</h2>
+            <p>View, add, edit, or delete users.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Manage Products</h2>
+            <p>View, add, edit, or delete products.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Sales Report</h2>
+            <p>View sales report and analytics.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Settings</h2>
+            <p>Configure application settings.</p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for Logout -->
+<script>
+  function logout() {
+    // Your logout logic here
+    // For example, redirect to logout page
+    window.location.href = "/logout";
+  }
+</script>
+</body>
+</html>
