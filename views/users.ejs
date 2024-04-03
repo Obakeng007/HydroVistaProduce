@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+<!-- Navigation -->
+<nav class="bg-gray-800 shadow-lg text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-semibold">Admin Dashboard<br>
+        <%= user%>
+        </h1>
+        <a href="/admin/dashboard" class="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600">Back to Dashboard</a>
+        <form action="/admin/logout">
+            <button class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg">Logout</button>
+        </form>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mx-auto mt-8">
+    <h2 class="text-2xl font-semibold mb-4">Manage Users</h2>
+
+    <!-- User Table -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <table class="w-full">
+            <thead class="bg-gray-200">
+            <tr>
+                <th class="px-4 py-2">ID</th>
+                <th class="px-4 py-2">first</th>
+                <th class="px-4 py-2">Last name</th>
+                <th class="px-4 py-2">Email</th>
+                <th class="px-4 py-2">Phone</th>
+                <th class="px-4 py-2">Gender</th>
+                <th class="px-4 py-2">Action</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="px-4 py-2">1</td>
+                <td class="px-4 py-2">John Doe</td>
+                <td class="px-4 py-2">john@example.com</td>
+                <td class="px-4 py-2">john@example.com</td>
+                <td class="px-4 py-2">john@example.com</td>
+                <td class="px-4 py-2">john@example.com</td>
+                <td class="px-4 py-2">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded">Edit</button>
+                    <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 rounded">Delete</button>
+                </td>
+            </tr>
+            <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add User Button -->
+    <div class="mt-4">
+        <a href="#" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Add User</a>
+    </div>
+</div>
+</body>
+</html>
