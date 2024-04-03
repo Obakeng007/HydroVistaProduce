@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require('mongoose');
 const User = require('./models/user.js');
+const Contact = require('./models/contact');
 
 
 //Create express app
@@ -88,6 +89,17 @@ app.post('/users',(req, res)=>{
       res.redirect('/')
     }).catch((err)=>{
       console.log(err)
+  })
+})
+
+//Get contact requests from user
+app.post('/contact',(req,res)=>{
+  const contact = new Contact(req.body);
+  contact.save()
+    .then((data)=>{
+      res.redirect('/contact')
+    }).catch((err)=>{
+      console.log(err);
   })
 })
 
