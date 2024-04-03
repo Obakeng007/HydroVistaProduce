@@ -24,14 +24,6 @@ router.get('/users',(req, res) => {
 })
 
 //retrieving all users from the database
-router.get('/all-users',(req, res)=>{
-  User.find()
-    .then((data)=>{
-      res.send(data)
-    }).catch((err)=>{
-    console.log(err);
-  })
-});
 
 router.get("/", (req, res) => {
   res.render("index");

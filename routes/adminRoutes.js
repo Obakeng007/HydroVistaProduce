@@ -1,4 +1,5 @@
 const express = require('express');
+const User = require("../models/user");
 const router = express.Router();
 
 //Admin user routing
@@ -35,6 +36,14 @@ router.get('/admin/manageusers',(req, res)=>{
   }
 })
 
+router.get('/admin/manageuser',(req, res)=>{
+  User.find().sort({createdAt: -1})
+    .then((data)=>{
+      res.send(data)
+    }).catch((err)=>{
+    console.log(err);
+  })
+});
 
 router.get('/admin',(req, res)=>{
   res.status(200).render('admin');
