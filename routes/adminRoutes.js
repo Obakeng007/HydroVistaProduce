@@ -31,15 +31,9 @@ router.get('/admin/logout', (req, res)=>{
 })
 
 router.get('/admin/manageusers',(req, res)=>{
-  if(req.session.user){
-    res.render('users',{user: req.session.user});
-  }
-})
-
-router.get('/admin/manageuser',(req, res)=>{
   User.find().sort({createdAt: -1})
     .then((data)=>{
-      res.send(data)
+      res.render('users', {data});
     }).catch((err)=>{
     console.log(err);
   })

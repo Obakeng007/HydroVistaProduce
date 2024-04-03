@@ -12,7 +12,7 @@
 <nav class="bg-gray-800 shadow-lg text-white p-4">
     <div class="container mx-auto flex justify-between items-center">
         <h1 class="text-xl font-semibold">Admin Dashboard<br>
-        <%= user%>
+
         </h1>
         <a href="/admin/dashboard" class="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600">Back to Dashboard</a>
         <form action="/admin/logout">
@@ -30,7 +30,6 @@
         <table class="w-full">
             <thead class="bg-gray-200">
             <tr>
-                <th class="px-4 py-2">ID</th>
                 <th class="px-4 py-2">first</th>
                 <th class="px-4 py-2">Last name</th>
                 <th class="px-4 py-2">Email</th>
@@ -40,11 +39,11 @@
 
             </tr>
             </thead>
+            <%if (data.length > 0) {%>
+            <%data.forEach(user => {%>
             <tbody>
             <tr>
-                <%if (data.length > 0) {%>
-                <%data.forEach(user => {%>
-                <td class="px-4 py-2"><%= user.id%></td>
+
                 <td class="px-4 py-2"><%= user.firstName%></td>
                 <td class="px-4 py-2"><%= user.lastName%></td>
                 <td class="px-4 py-2"><%= user.email%></td>
